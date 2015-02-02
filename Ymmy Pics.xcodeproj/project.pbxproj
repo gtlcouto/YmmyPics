@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		35463BDA1A803CCE00FE9B1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BD91A803CCE00FE9B1E /* main.m */; };
 		35463BDD1A803CCE00FE9B1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BDC1A803CCE00FE9B1E /* AppDelegate.m */; };
-		35463BE01A803CCE00FE9B1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BDF1A803CCE00FE9B1E /* ViewController.m */; };
+		35463BE01A803CCE00FE9B1E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BDF1A803CCE00FE9B1E /* RootViewController.m */; };
 		35463BE31A803CCE00FE9B1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35463BE11A803CCE00FE9B1E /* Main.storyboard */; };
 		35463BE51A803CCE00FE9B1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35463BE41A803CCE00FE9B1E /* Images.xcassets */; };
 		35463BE81A803CCE00FE9B1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35463BE61A803CCE00FE9B1E /* LaunchScreen.xib */; };
@@ -32,8 +32,8 @@
 		35463BD91A803CCE00FE9B1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35463BDB1A803CCE00FE9B1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35463BDC1A803CCE00FE9B1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		35463BDE1A803CCE00FE9B1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		35463BDF1A803CCE00FE9B1E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		35463BDE1A803CCE00FE9B1E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		35463BDF1A803CCE00FE9B1E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		35463BE21A803CCE00FE9B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35463BE41A803CCE00FE9B1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35463BE71A803CCE00FE9B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -81,10 +81,8 @@
 		35463BD61A803CCE00FE9B1E /* Ymmy Pics */ = {
 			isa = PBXGroup;
 			children = (
-				35463BDB1A803CCE00FE9B1E /* AppDelegate.h */,
-				35463BDC1A803CCE00FE9B1E /* AppDelegate.m */,
-				35463BDE1A803CCE00FE9B1E /* ViewController.h */,
-				35463BDF1A803CCE00FE9B1E /* ViewController.m */,
+				35463BFE1A803D0900FE9B1E /* AppDelegate */,
+				35463BFD1A803CF800FE9B1E /* View */,
 				35463BE11A803CCE00FE9B1E /* Main.storyboard */,
 				35463BE41A803CCE00FE9B1E /* Images.xcassets */,
 				35463BE61A803CCE00FE9B1E /* LaunchScreen.xib */,
@@ -117,6 +115,24 @@
 				35463BF21A803CCE00FE9B1E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35463BFD1A803CF800FE9B1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35463BDE1A803CCE00FE9B1E /* RootViewController.h */,
+				35463BDF1A803CCE00FE9B1E /* RootViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		35463BFE1A803D0900FE9B1E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				35463BDB1A803CCE00FE9B1E /* AppDelegate.h */,
+				35463BDC1A803CCE00FE9B1E /* AppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35463BE01A803CCE00FE9B1E /* ViewController.m in Sources */,
+				35463BE01A803CCE00FE9B1E /* RootViewController.m in Sources */,
 				35463BDD1A803CCE00FE9B1E /* AppDelegate.m in Sources */,
 				35463BDA1A803CCE00FE9B1E /* main.m in Sources */,
 			);
