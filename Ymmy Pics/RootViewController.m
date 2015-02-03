@@ -15,6 +15,7 @@
 #import "RootViewController.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "User.h"
 
 @interface RootViewController ()
 
@@ -32,9 +33,11 @@
 //    testObject[@"foo"] = @"bar";
 //    [testObject saveInBackground];
 
-    FBLoginView *loginView = [[FBLoginView alloc] init];
+    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"public_profile", @"email", @"user_friends",]];
     loginView.center = self.view.center;
     [self.view addSubview:loginView];
+
+   
 }
 
 @end
