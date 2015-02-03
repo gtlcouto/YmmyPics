@@ -17,6 +17,7 @@
 @dynamic profilePictureSmall;
 @dynamic username;
 @dynamic password;
+@dynamic facebookId;
 
 
 + (void)load
@@ -24,9 +25,11 @@
     [self registerSubclass];
 }
 
-+ (NSString *)parseClassName
+
+
++ (User*) currentUser
 {
-    return @"User";
+    return (User*)[PFUser user];
 }
 
 

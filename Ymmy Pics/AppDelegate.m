@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "User.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,8 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
     // ...
+
+    [User registerSubclass];
     return true;
 }
 

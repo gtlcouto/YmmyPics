@@ -17,7 +17,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "User.h"
 
-@interface RootViewController ()
+@interface RootViewController () <FBLoginViewDelegate>
 
 @end
 
@@ -27,17 +27,57 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    // Kevin's Comment
 
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    testObject[@"foo"] = @"bar";
-//    [testObject saveInBackground];
 
-    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"public_profile", @"email", @"user_friends",]];
+
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
+
+    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"public_profile", @"picture", @"email", @"user_friends",]];
     loginView.center = self.view.center;
     [self.view addSubview:loginView];
 
-   
+    // facebook login delegate
+    loginView.delegate = self;
+
 }
 
-@end
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
+{
+    NSLog(@"%@",user[@"first_name"]);
+    User *tempUser = [User currentUser];
+
+    tempUser.firstName = user[@"first_name"];
+    tempUser.lastName = user[@"last_name"];
+    tempUser.email = user[@"email"];
+    tempUser.facebookId = user[@"id"];
+
+    NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=normal", user[@"id"]]];
+    NSURL *pictureURLSmall = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=small", user[@"id"]]];
+    NSData *imageData = [NSMutableData dataWithContentsOfURL:pictureURL];
+    NSData *imageData2 = [NSMutableData dataWithContentsOfURL:pictureURLSmall];
+
+   tempUser.profilePictureMedium = [PFFile fileWithData:imageData];
+    tempUser.profilePictureSmall = [PFFile fileWithData:imageData2];
+    tempUser.username = @"teste";
+    tempUser.password = @"teste";
+
+    [tempUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded)
+        {
+            NSLog(@"Worked!");
+        }
+        else
+        {
+            NSLog(error.description);
+        }
+    }];
+    
+    
+    
+    
+    
+}
+
+    @end

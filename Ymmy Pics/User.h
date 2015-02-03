@@ -14,8 +14,9 @@
 
 @property (retain) NSString *firstName;
 @property (retain) NSString *lastName;
-@property (retain) NSData *profilePictureMedium;
-@property (retain) NSData *profilePictureSmall;
+@property (retain) NSString *facebookId;
+@property (retain) PFFile *profilePictureMedium;
+@property (retain) PFFile *profilePictureSmall;
 
 
 
