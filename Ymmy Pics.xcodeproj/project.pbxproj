@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A210C6F1A8042DC000C9784 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C6A1A8042DC000C9784 /* Bolts.framework */; };
 		0A210C701A8042DC000C9784 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C6B1A8042DC000C9784 /* Parse.framework */; };
 		0A210C711A8042DC000C9784 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C6C1A8042DC000C9784 /* ParseCrashReporting.framework */; };
 		0A210C721A8042DC000C9784 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C6D1A8042DC000C9784 /* ParseFacebookUtils.framework */; };
@@ -23,6 +22,7 @@
 		0A210C861A8044B5000C9784 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C851A8044B5000C9784 /* SystemConfiguration.framework */; };
 		0A210C881A8044C1000C9784 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C871A8044C1000C9784 /* libz.dylib */; };
 		0A210C8A1A8044CA000C9784 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C891A8044CA000C9784 /* libsqlite3.dylib */; };
+		0A210C8C1A804781000C9784 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C6A1A8042DC000C9784 /* Bolts.framework */; };
 		35463BDA1A803CCE00FE9B1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BD91A803CCE00FE9B1E /* main.m */; };
 		35463BDD1A803CCE00FE9B1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BDC1A803CCE00FE9B1E /* AppDelegate.m */; };
 		35463BE01A803CCE00FE9B1E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BDF1A803CCE00FE9B1E /* RootViewController.m */; };
@@ -79,6 +79,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A210C701A8042DC000C9784 /* Parse.framework in Frameworks */,
+				0A210C711A8042DC000C9784 /* ParseCrashReporting.framework in Frameworks */,
+				0A210C721A8042DC000C9784 /* ParseFacebookUtils.framework in Frameworks */,
+				0A210C731A8042DC000C9784 /* ParseUI.framework in Frameworks */,
+				0A210C8C1A804781000C9784 /* Bolts.framework in Frameworks */,
 				0A210C8A1A8044CA000C9784 /* libsqlite3.dylib in Frameworks */,
 				0A210C881A8044C1000C9784 /* libz.dylib in Frameworks */,
 				0A210C861A8044B5000C9784 /* SystemConfiguration.framework in Frameworks */,
@@ -90,11 +95,6 @@
 				0A210C7A1A804482000C9784 /* CoreGraphics.framework in Frameworks */,
 				0A210C781A804475000C9784 /* CFNetwork.framework in Frameworks */,
 				0A210C761A80433A000C9784 /* AudioToolbox.framework in Frameworks */,
-				0A210C701A8042DC000C9784 /* Parse.framework in Frameworks */,
-				0A210C711A8042DC000C9784 /* ParseCrashReporting.framework in Frameworks */,
-				0A210C731A8042DC000C9784 /* ParseUI.framework in Frameworks */,
-				0A210C721A8042DC000C9784 /* ParseFacebookUtils.framework in Frameworks */,
-				0A210C6F1A8042DC000C9784 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
