@@ -26,6 +26,8 @@
 		0A210C9E1A804AFD000C9784 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C9C1A804AFD000C9784 /* FacebookSDK.framework */; };
 		0A210C9F1A804AFD000C9784 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A210C9D1A804AFD000C9784 /* FBAudienceNetwork.framework */; };
 		296EE3481A804A7400F5AF94 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 296EE3471A804A7400F5AF94 /* User.m */; };
+		296EE34B1A804F3900F5AF94 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 296EE34A1A804F3900F5AF94 /* Media.m */; };
+		296EE34E1A8051D500F5AF94 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 296EE34D1A8051D500F5AF94 /* Activity.m */; };
 		35463BDA1A803CCE00FE9B1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BD91A803CCE00FE9B1E /* main.m */; };
 		35463BDD1A803CCE00FE9B1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BDC1A803CCE00FE9B1E /* AppDelegate.m */; };
 		35463BE01A803CCE00FE9B1E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35463BDF1A803CCE00FE9B1E /* RootViewController.m */; };
@@ -69,6 +71,10 @@
 		0A210C911A80484B000C9784 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		296EE3461A804A7400F5AF94 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		296EE3471A804A7400F5AF94 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		296EE3491A804F3900F5AF94 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		296EE34A1A804F3900F5AF94 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		296EE34C1A8051D500F5AF94 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		296EE34D1A8051D500F5AF94 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		35463BD41A803CCE00FE9B1E /* Ymmy Pics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ymmy Pics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35463BD81A803CCE00FE9B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35463BD91A803CCE00FE9B1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 			children = (
 				296EE3461A804A7400F5AF94 /* User.h */,
 				296EE3471A804A7400F5AF94 /* User.m */,
+				296EE3491A804F3900F5AF94 /* Media.h */,
+				296EE34A1A804F3900F5AF94 /* Media.m */,
+				296EE34C1A8051D500F5AF94 /* Activity.h */,
+				296EE34D1A8051D500F5AF94 /* Activity.m */,
 			);
 			name = "Data Classes";
 			sourceTree = "<group>";
@@ -338,8 +348,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				296EE3481A804A7400F5AF94 /* User.m in Sources */,
+				296EE34B1A804F3900F5AF94 /* Media.m in Sources */,
 				35463BE01A803CCE00FE9B1E /* RootViewController.m in Sources */,
 				35463BDD1A803CCE00FE9B1E /* AppDelegate.m in Sources */,
+				296EE34E1A8051D500F5AF94 /* Activity.m in Sources */,
 				35463BDA1A803CCE00FE9B1E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
