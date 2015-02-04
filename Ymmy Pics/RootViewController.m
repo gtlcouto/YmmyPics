@@ -16,8 +16,14 @@
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "User.h"
+#import "UIImage+FiltrrCompositions.h"
+
+
 
 @interface RootViewController () <FBLoginViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *diego;
+
 
 @end
 
@@ -40,6 +46,11 @@
 
     // facebook login delegate
     loginView.delegate = self;
+
+    UIImage *img = [UIImage imageNamed:@"diego.jpg"];
+//    img = [img e2];
+    self.diego.image = img;
+//    self.diego.transform = CGAffineTransformMakeRotation(M_PI_2);
 
 }
 
@@ -74,10 +85,24 @@
         }
     }];
     
-    
-    
-    
-    
 }
+
+- (IBAction)e1ButtonTapped:(UIButton *)sender
+{
+    UIImage *img = [UIImage imageNamed:@"diego.jpg"];
+    img = [img e8];
+    self.diego.image = img;
+    self.diego.transform = CGAffineTransformMakeRotation(M_PI_2);
+}
+
+- (IBAction)e2ButtonTapped:(UIButton *)sender
+{
+    UIImage *img = [UIImage imageNamed:@"diego.jpg"];
+    img = [img e2];
+    self.diego.image = img;
+    self.diego.transform = CGAffineTransformMakeRotation(M_PI_2);
+}
+
+
 
     @end
