@@ -11,8 +11,11 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "User.h"
+<<<<<<< HEAD
 #import "Media.h"
 #import "Activity.h"
+=======
+>>>>>>> 98fc91753a11aa8260a13544cfa6c69c926e66a7
 
 @interface AppDelegate ()
 
@@ -39,8 +42,11 @@
     // ...
 
     [User registerSubclass];
+<<<<<<< HEAD
     [Media registerSubclass];
     [Activity registerSubclass];
+=======
+>>>>>>> 98fc91753a11aa8260a13544cfa6c69c926e66a7
     return true;
 }
 

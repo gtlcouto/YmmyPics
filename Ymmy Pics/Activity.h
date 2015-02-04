@@ -26,5 +26,4 @@
 +(void)unfollowUser:(User *)toUser currentUser:(User *)fromUser;
 
 
-
 @end

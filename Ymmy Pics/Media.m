@@ -12,7 +12,10 @@
 
 @dynamic mediaFile;
 @dynamic caption;
+<<<<<<< HEAD
 @dynamic mediaOwner;
+=======
+>>>>>>> 98fc91753a11aa8260a13544cfa6c69c926e66a7
 
 + (void)load
 {
@@ -24,6 +27,7 @@
     return @"Media";
 }
 
+<<<<<<< HEAD
 +(void)addMedia:(PFFile *)mediaFile withCaption:(NSString *)caption;
 {
     Media *media = [Media object];
@@ -36,6 +40,8 @@
 }
 
 
+=======
+>>>>>>> 98fc91753a11aa8260a13544cfa6c69c926e66a7
 
 
 @end
