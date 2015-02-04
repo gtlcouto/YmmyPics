@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "User.h"
 
 @interface AppDelegate ()
@@ -27,6 +28,8 @@
     // Initialize Parse.
     [Parse setApplicationId:@"5J0RZGSskEBBflzbI887NA3HVIifHSngVkeQem0G"
                   clientKey:@"mqP4pUu4pvlTJpisxtNoG0r2PV1PlV25rMwWhWpZ"];
+
+    [PFFacebookUtils initializeFacebook];
 
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
@@ -71,5 +74,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end

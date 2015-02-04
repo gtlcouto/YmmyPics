@@ -15,6 +15,7 @@
 #import "RootViewController.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "User.h"
 
 @interface RootViewController () <FBLoginViewDelegate>
@@ -30,19 +31,28 @@
 
 
 
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
-
-    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"public_profile", @"picture", @"email", @"user_friends",]];
+//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+//    testObject[@"foo"] = @"bar";
+//    [testObject saveInBackground];
+//
+    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"public_profile", @"email",]];
     loginView.center = self.view.center;
     [self.view addSubview:loginView];
+
+
+
+
 
     // facebook login delegate
     loginView.delegate = self;
 
 }
 
+
+- (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error
+{
+    NSLog(error.description);
+}
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
 {
     NSLog(@"%@",user[@"first_name"]);
@@ -60,8 +70,8 @@
 
    tempUser.profilePictureMedium = [PFFile fileWithData:imageData];
     tempUser.profilePictureSmall = [PFFile fileWithData:imageData2];
-    tempUser.username = @"teste";
-    tempUser.password = @"teste";
+    tempUser.username = @"test908";
+
 
     [tempUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded)
