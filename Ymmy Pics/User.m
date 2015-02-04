@@ -20,10 +20,7 @@
 @dynamic facebookId;
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 98fc91753a11aa8260a13544cfa6c69c926e66a7
 + (void)load
 {
     [self registerSubclass];
@@ -36,7 +33,7 @@
     return (User*)[PFUser user];
 }
 
-<<<<<<< HEAD
+
 + (void) retrieveFollowedPeopleMedias:(void (^)(NSArray *))complete
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
@@ -54,8 +51,7 @@
 
 }
 
-=======
->>>>>>> 98fc91753a11aa8260a13544cfa6c69c926e66a7
+
 
 
 
