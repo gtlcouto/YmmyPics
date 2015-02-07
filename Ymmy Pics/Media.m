@@ -14,8 +14,10 @@
 
 @dynamic mediaFile;
 @dynamic caption;
+
 @dynamic mediaOwner;
 @dynamic mediaImage;
+
 
 + (void)load
 {
@@ -27,7 +29,12 @@
     return @"Media";
 }
 
+<<<<<<< HEAD
 +(void)addMedia:(UIImage *)mediaImage withCaption:(NSString *)caption withCompletion:(void (^)(BOOL succeeded))complete
+=======
+
++(void)addMedia:(PFFile *)mediaFile withCaption:(NSString *)caption;
+>>>>>>> 7d26cc92368675ff2fe713f274b8bfcef45ffb04
 {
     NSData *imageData = UIImageJPEGRepresentation(mediaImage, 0.4);
     PFFile *file = [PFFile fileWithData:imageData];
@@ -132,6 +139,7 @@
     }
 
 }
+
 
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "TakePhotoViewController.h"
+<<<<<<< HEAD
 #import "DBCameraViewController.h"
 #import "DBCameraContainerViewController.h"
 #import "DBCameraLibraryViewController.h"
@@ -20,6 +21,10 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property BOOL isImageAdded;
+=======
+
+@interface TakePhotoViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+>>>>>>> 7d26cc92368675ff2fe713f274b8bfcef45ffb04
 
 @end
 
@@ -27,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
     self.textView.delegate = self;
     self.textView.text = @"Write a caption...";
     self.textView.textColor = [UIColor lightGrayColor];
@@ -151,6 +157,33 @@
         self.isImageAdded = true;
     }];
 
+=======
+
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+
+    [self presentViewController:picker animated:YES completion:NULL];
+
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        
+    }
+
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+>>>>>>> 7d26cc92368675ff2fe713f274b8bfcef45ffb04
 
 }
 

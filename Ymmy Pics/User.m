@@ -42,6 +42,7 @@
 }
 
 
+<<<<<<< HEAD
 + (void) retrieveUserWithUserName:(NSString *)text completion:(void (^)(NSArray *array))complete
 {
     PFQuery *query = [User query];
@@ -59,6 +60,9 @@
 }
 
 + (User *) retrieveUserWithName:(NSString *)name
+=======
++ (void) retrieveFollowedPeopleMedias:(void (^)(NSArray *))complete
+>>>>>>> 7d26cc92368675ff2fe713f274b8bfcef45ffb04
 {
     PFQuery *query = [User query];
 
@@ -94,5 +98,8 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7d26cc92368675ff2fe713f274b8bfcef45ffb04
 @end
